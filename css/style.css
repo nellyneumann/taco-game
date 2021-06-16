@@ -1,3 +1,21 @@
 body{
     background-color: rgba(165, 106, 42, 0.678);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 60px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:cornsilk;
+    align-content: center;
+    
+}
+
+.points {
+    position: relative;
+    top: 150px;
+    left: 370px;
 }

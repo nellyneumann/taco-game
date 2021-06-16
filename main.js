@@ -1,15 +1,12 @@
 
 const game = new Game();
 
-function preload() {
-	console.log("main preload")
-	
+function preload() {	
 	game.preload()
 }
 
 function setup() {
-	console.log("setup")
-	createCanvas(1200, 1000);
+	createCanvas(1200, 800);
 	game.setup();
 }
 
@@ -24,8 +21,3 @@ function draw() {
 	  }
 }
 
-function keyPressed() {
-	if (keyCode === 32) {
-		game.player.jump();
-	}
-}
