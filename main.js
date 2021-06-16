@@ -3,17 +3,18 @@ const game = new Game();
 
 function preload() {
 	console.log("main preload")
-	img = loadImage('./assets/background.png');
-	playerImage = loadImage("./assets/tortilla.gif")
+	
+	game.preload()
 }
 
 function setup() {
 	console.log("setup")
-	createCanvas(800, 800);
-	game.setup(playerImage);
+	createCanvas(1200, 1000);
+	game.setup();
 }
 
 function draw() {
+	game.draw();
 	if (keyIsDown(LEFT_ARROW)) {
 		game.player.moveLeft();
 	  }

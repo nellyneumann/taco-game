@@ -1,25 +1,21 @@
 class Player {
-  constructor(playerImage) {
+  constructor(img) {
     console.log("Player created");
-    this.x = 300;
-    this.y = 200;
-    this.image = playerImage;
-    this.draw();
+    this.x = 100;
+    this.y = 500;
+    this.image = img;
   }
   moveRight() {
     this.x += 10;
-    this.draw();
   }
   moveLeft() {
     this.x -= 10;
-    this.draw();
   }
 
   draw() {
-    console.log("Drawing player");
-    console.log(this.image)
+    //console.log("Drawing player");
     clear();
-    image(playerImage, this.x, this.y);
+    image(this.image, this.x, this.y, 120, 90)
 
   }
 }
