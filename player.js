@@ -39,12 +39,6 @@ class Ingredient {
     this.speed = 3;
   }
 
-  /**
-   * Moves down the ingredient by the speed velocity.
-   * If it reaches y == 700, it checks if its x value
-   * is 
-   * @param {*} x 
-   */
   moveDown(x) {
     if (this.y >= 700) {
       if (Math.abs(this.x - x) <= 40) {
@@ -58,6 +52,7 @@ class Ingredient {
       this.y = -100;
       this.x = getRandomInt(800);
       this.speed = getRandomInt(6) + 3;
+      document.querySelector("#dropped").innerHTML++;
     }
     this.y += this.speed;
   }

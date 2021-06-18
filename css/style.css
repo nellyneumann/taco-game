@@ -15,7 +15,19 @@ h1 {
 }
 
 .points {
-    position: relative;
-    top: 150px;
-    left: 370px;
+    position: absolute;
+    top: 90px;
+    left: 1050px;
+}
+
+.dropped {
+    position: absolute;
+    top: 130px;
+    left: 1000px;
+}
+
+
+.gameover {
+    color: chocolate;
+    position: absolute;
 }

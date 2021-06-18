@@ -3,6 +3,7 @@ class Game {
     this.backgroundImage;
     this.playerImage;
     this.ingredientImageMeat;
+    this.droppedIngredientCounter = 0;
   }
 
   preload() {
@@ -24,11 +25,17 @@ class Game {
 
   draw() {
     clear();
+    if (document.querySelector("#dropped").innerHTML >= 10) {
+      document.querySelector(".gameover").innerHTML = "Game Over"
+    } else { 
+      image(this.backgroundImage, 0, 0, 1200, 800);
+      this.player.draw();
+      this.ingredientMeat.draw(this.player.getX());
+      this.ingredientPineapple.draw(this.player.getX());
+      this.ingredientKoriander.draw(this.player.getX());
 
-    image(this.backgroundImage, 0, 0, 1200, 800);
-    this.player.draw();
-    this.ingredientMeat.draw(this.player.getX());
-    this.ingredientPineapple.draw(this.player.getX());
-    this.ingredientKoriander.draw(this.player.getX());
+    }
+
+    
   }
 }
